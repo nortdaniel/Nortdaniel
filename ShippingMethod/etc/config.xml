@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/config.xsd">
+    <default>
+        <carriers>
+            <nortdaniel_fixed>
+                <active>1</active>
+                <model>Nortdaniel\ShippingMethod\Model\Carrier\ShippingMethod</model>
+                <name>Fixed Rate Shipping</name>
+                <price>100.00</price>
+                <title>Fixed Rate Shipping Method</title>
+                <sort_order>0</sort_order>
+            </nortdaniel_fixed>
+        </carriers>
+    </default>
+</config>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Api/etc/webapi.xsd">
+    <route url="/V1/order-log/:orderId" method="GET">
+        <service class="Nortdaniel\PostPurchase\Api\OrderLogManagementInterface" method="getOrderLog"/>
+        <resources>
+            <resource ref="Nortdaniel_PostPurchase::order_log"/>
+        </resources>
+    </route>
+</routes>

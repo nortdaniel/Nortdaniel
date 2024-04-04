@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/config.xsd">
+    <default>
+        <settings>
+            <general>
+                <overprice>100</overprice>
+                <shipping_cost>99</shipping_cost>
+            </general>
+        </settings>
+    </default>
+</config>

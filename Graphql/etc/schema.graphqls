@@ -1,0 +1,31 @@
+type Query {
+    customShippingMethods: [CustomShippingMethod] @resolver(class: "Nortdaniel\\Graphql\\Model\\Resolver\\ShippingMethods")
+    getStatesByCountryId(country_id: String): [CountryStates] @resolver(class: "Nortdaniel\\Graphql\\Model\\Resolver\\CountryStates")
+    getColonyData: [CountryStates] @resolver(class: "Nortdaniel\\Graphql\\Model\\Resolver\\Colony")
+}
+
+type CustomShippingMethod {
+    carrier_code: String
+    method_code: String
+    carrier_title: String
+    method_title: String
+}
+
+type Mutation {
+    updateCustomerAddressCustomFields(input: UpdateCustomerAddressInput! @doc(description: "Input for updating Customer Address Custom Fields")): UpdateCustomerAddressOutput @resolver(class: "Nortdaniel\\Graphql\\Model\\Resolver\\UpdateCustomerAddress")
+}
+
+input UpdateCustomerAddressInput {
+    customer_address_id: Int! @doc(description: "The customer address ID.")
+    municipio: String! @doc(description: "Custom field Municipio.")
+    colonia: String! @doc(description: "Custom field Colonia selected from dropdown.")
+}
+
+type UpdateCustomerAddressOutput {
+    success: Boolean
+}
+
+type CountryStates {
+    id: String
+    name: String
+}

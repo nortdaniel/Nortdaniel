@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:System/etc/system_file.xsd">
+    <system>
+        <tab id="nortdaniel_config" translate="label" sortOrder="0">
+            <label>Mi configuración</label>
+        </tab>
+        <section id="settings" translate="label" sortOrder="300" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Configuración</label>
+            <tab>nortdaniel_config</tab>
+            <resource>Nortdaniel_Overprice::settings</resource>
+            <group id="general" translate="label" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Configuración General</label>
+                <field id="overprice" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sobreprecio</label>
+                </field>
+                <field id="shipping_cost" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Shipping Cost</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
